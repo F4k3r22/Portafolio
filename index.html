@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fotografo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: 0% 75%;
+  background-size: cover;
+  background-image: url("https://www.bodegasbianchi.com.ar/cdn/shop/articles/Diseno_sin_titulo_3_1024x1024.png?v=1603723540"); /* Cambio de la imagen de café por una de vino */
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#portfolio" class="w3-button w3-block w3-black">PORTFOLIO</a> <!-- Cambio de MENU a PORTFOLIO -->
+    </div>
+    <div class="w3-col s3">
+      <a href="#services" class="w3-button w3-block w3-black">SERVICES</a> <!-- Cambio de WHERE a SERVICES -->
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 6am to 5pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Wine<br>Photography</span> <!-- Cambio de "the Cafe" a "Wine Photography" -->
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT WINE PHOTOGRAPHY</span></h5>
+    <p>Wine Photography is dedicated to capturing the essence and beauty of fine wines through stunning photography. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>In addition to our wine photography services, we also offer consulting and branding solutions for wineries looking to enhance their visual presence.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"A great wine deserves great photography."</i></p>
+      <p>Founder and Photographer: John Doe</p>
+    </div>
+    <img src="famiglia-malbec_ef108117-3aa2-4bfc-b4f5-34f839d6dcca_480x480.webp" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 9am to 6pm.</p>
+    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+  </div>
+</div>
+
+<!-- Portfolio Container -->
+<div class="w3-container" id="portfolio">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PORTFOLIO</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Portraits');" id="myLink">
+        <div class="w3-col s6 tablink">Portraits</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Landscapes');">
+        <div class="w3-col s6 tablink">Landscapes</div>
+      </a>
+    </div>
+
+    <div id="Portraits" class="w3-container menu w3-padding-48 w3-card">
+      <img src="DUGSNPKINBBBBAD3GEEGZQ7B5Y.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+      <img src="mejores-vinos-tintos-1200x900.webp" style="width:100%;max-width:1000px;margin-top:32px;">
+      <!-- Agrega más imágenes de retratos según sea necesario -->
+    </div>
+
+    <div id="Landscapes" class="w3-container menu w3-padding-48 w3-card">
+      <img src="60c2575eb0b7f.jpeg" style="width:100%;max-width:1000px;margin-top:32px;">
+      <img src="tipos-de-vino.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+      <!-- Agrega más imágenes de paisajes según sea necesario -->
+    </div>  
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="services" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">OUR SERVICES</span></h5>
+    <p>Our services include:</p>
+    <ul>
+      <li>Wine Photography Sessions</li>
+      <li>Winery Branding Consultation</li>
+      <li>Event Photography for Wine Tastings and Launches</li>
+      <!-- Agrega más servicios según sea necesario -->
+    </ul>
+    <p>Contact us for pricing and availability.</p>
+    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+    <p><strong>Email:</strong> info@winephotography.com</p>
+    <p><strong>Phone:</strong> +1 123 456 7890</p>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
